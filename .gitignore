@@ -63,3 +63,7 @@ typings/
 # ignore lock files
 .lock
 *.lock
+
+# built server code
+/build
+/dist
