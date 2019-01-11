@@ -6,19 +6,25 @@ import * as cors from 'cors'
 
 const app = express()
 
-app.use(cors({
-  methods: 'POST,GET,OPTIONS',
-}))
+app.use(
+  cors({
+    methods: 'POST,GET,OPTIONS',
+  }),
+)
 
 app.use(morgan('dev'))
 
-app.use(compression({
-  threshold: 0,
-}))
+app.use(
+  compression({
+    threshold: 0,
+  }),
+)
 
-app.use(bodyParser.urlencoded({
-  extended: true,
-}))
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  }),
+)
 app.use(bodyParser.json())
 
 export default app

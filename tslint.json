@@ -3,5 +3,10 @@
     "tslint:latest",
     "tslint-config-prettier",
     "tslint-config-airbnb"
-  ]
+  ],
+  "rules": {
+    "no-console": false,
+    "semicolon": false,
+    "ordered-imports": false
+  }
 }
