@@ -26,12 +26,10 @@ const options: LoggerOptions = {
   ],
 }
 
-const logger: Logger = createLogger(options)
+export const logger: Logger = createLogger(options)
 
 export class LoggerStream {
   public write(message: string) {
     logger.info(message)
   }
 }
-
-export default logger

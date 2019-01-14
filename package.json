@@ -8,6 +8,7 @@
     "start:dev": "nodemon",
     "build": "rm -rf ./build && tsc",
     "test": "jest",
+    "test:coverage": "jest --coverage && open coverage/lcov-report/index.html",
     "clean": "rm -rf ./build && rm -rf yarn.lock && rm -rf package.lock && rm -rf ./node_modules && yarn cache clean && npm cache clear --force && yarn",
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged"
@@ -21,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn test"
     }
   },
   "repository": {
