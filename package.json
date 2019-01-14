@@ -13,18 +13,6 @@
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged"
   },
-  "lint-staged": {
-    "*.ts": "tslint",
-    "*.{ts,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && yarn test"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thousight/Express-TS-Starter.git"
