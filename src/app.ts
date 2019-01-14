@@ -4,6 +4,8 @@ import * as compression from 'compression'
 import * as morgan from 'morgan'
 import * as cors from 'cors'
 
+import { LoggerStream } from './utils/logger'
+
 const app = express()
 
 app.use(
@@ -12,7 +14,7 @@ app.use(
   }),
 )
 
-app.use(morgan('dev'))
+app.use(morgan('combined', { stream: new LoggerStream() }))
 
 app.use(
   compression({
