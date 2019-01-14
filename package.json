@@ -8,6 +8,7 @@
     "start:dev": "nodemon",
     "build": "rm -rf ./build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./build && rm -rf yarn.lock && rm -rf package.lock && rm -rf ./node_modules && yarn cache clean && npm cache clear --force && yarn",
     "lint": "tslint '*.ts'"
   },
   "repository": {
