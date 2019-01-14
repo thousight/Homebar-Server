@@ -44,9 +44,3 @@ yarn start
 ```
 yarn clean
 ```
-
-4. To do a lint to check code formating errors:
-
-```
-yarn lint
-```
