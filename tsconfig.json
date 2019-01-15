@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2015", "esnext"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "./build",
     "pretty": true,
     "sourceMap": true,
-    "target": "es6",
-    "outDir": "./build",
-    "baseUrl": "."
+    "target": "es6"
   },
   "include": ["server.ts", "src/**/*.ts"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "coverage"]
 }
