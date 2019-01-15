@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "express",
+        "releaseRules": [
+          { "type": "docs", "release": "prepatch" },
+          { "type": "fix", "release": "patch" },
+          { "type": "refactor", "release": "minor" },
+          { "type": "feat", "release": "major" }
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+        }
+      }
+    ]
+  ]
+}
