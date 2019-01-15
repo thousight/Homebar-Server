@@ -13,7 +13,8 @@
     "clean:dev": "yarn clean && yarn start:dev",
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "preinstall": "node scripts/preinstall-script.js"
   },
   "repository": {
     "type": "git",
