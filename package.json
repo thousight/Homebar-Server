@@ -15,7 +15,7 @@
     "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
     "preinstall": "node scripts/preinstall-script.js",
-    "postinstall": "yarn build && yarn semantic-release"
+    "postinstall": "node scripts/postinstall-script.js"
   },
   "repository": {
     "type": "git",
