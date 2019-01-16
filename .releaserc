@@ -1,5 +1,7 @@
 {
   "branch": "master",
+  "ci": false,
+  "dryRun": false,
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
