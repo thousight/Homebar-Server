@@ -5,6 +5,7 @@ import * as morgan from 'morgan'
 import * as cors from 'cors'
 
 import { LoggerStream } from './utils/logger'
+import * as packageJson from '../package.json'
 
 const app = express()
 
@@ -14,7 +15,7 @@ app.use(
   }),
 )
 
-app.use(morgan('combined', { stream: new LoggerStream() }))
+app.use(morgan('dev', { stream: new LoggerStream() }))
 
 app.use(
   compression({
@@ -28,5 +29,9 @@ app.use(
   }),
 )
 app.use(bodyParser.json())
+
+app.use('/', (_, res) =>
+  res.status(200).send(`${packageJson.name} is running!`),
+)
 
 export default app
