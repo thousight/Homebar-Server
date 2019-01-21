@@ -7,6 +7,8 @@
     "start": "node ./build/server.js",
     "start:dev": "nodemon",
     "build": "rm -rf ./build && tsc",
+    "preinstall": "node scripts/preinstall-script.js",
+    "postinstall": "node scripts/postinstall-script.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci",
@@ -15,8 +17,7 @@
     "clean:dev": "yarn clean && yarn start:dev",
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged",
-    "semantic-release": "semantic-release",
-    "preinstall": "node scripts/preinstall-script.js"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
