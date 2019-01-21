@@ -5,17 +5,16 @@ cache:
   directories:
     - ~/.npm
     - .jest
-deploy:
-  provider: heroku
-  api_key:
-    secure: $HEROKU_KEY
-  on:
-    repo: express-ts-starter
 jobs:
   include:
     - stage: test
       script:
         - yarn test:ci
-    - stage: 'Version bump'
-      script:
+    - stage: deploy
+      before_deploy:
         - yarn semantic-release
+      deploy:
+        provider: heroku
+        app: express-ts-starter
+        api_key:
+          secure: $HEROKU_KEY
