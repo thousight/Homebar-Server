@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thousight/Express-TS-Starter.svg?branch=master)](https://travis-ci.org/thousight/Express-TS-Starter)
+
 # Express-TS-Starter
 
 A minimal express server starter with TypeScript

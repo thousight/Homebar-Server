@@ -14,8 +14,7 @@
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
-    "preinstall": "node scripts/preinstall-script.js",
-    "postinstall": "node scripts/postinstall-script.js"
+    "preinstall": "node scripts/preinstall-script.js"
   },
   "repository": {
     "type": "git",
