@@ -9,7 +9,6 @@ deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_KEY
-  app: express-ts-starter
   on:
     repo: express-ts-starter
 jobs:
