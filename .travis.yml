@@ -16,7 +16,7 @@ jobs:
   include:
     - stage: test
       script:
-        - yarn test --ci
+        - yarn test:ci
     - stage: 'Version bump'
       script:
         - yarn semantic-release
