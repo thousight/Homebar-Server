@@ -26,4 +26,4 @@ jobs:
         # And this is a public key which is only decryptable by Travis so technically it is safe to expose it
         # Source: https://docs.travis-ci.com/user/encryption-keys/
         api_key:
-          secure: $HEROKU_API_KEY
+          secure: CU1OGNAXPUxwksIwmg++T0kR4J4eXdZn0QKaZ/TjtbVab/9z/uGLUqvFegACYdfPguLxCHgeK9Ci6wDcol+wqEr1yqlYb8bNvKyLqhqN7ciFUWZWE2pUF03zNgDGEcdFjnDuGsB9nGtzh/GoU/R4cj6vtysLWMvWpkjCntW/uNjimAtj5LglKU7vIMUhY5qfcGCBEg7fDsfEPdaAr7Bb/P3T37IA0i/l/5eKNwsB7JLJ3yYw1N0zNObO4KRGjoASWYJI0ItrFeOSLu7XIV0fn3IMaXj9vhMn+FXiDYpnKwgxG/fOHJBFZkQ2Xu983MHpKJMIjQqNz3XR/wVUC5fRMkXTrJOrlDaCiWCEqokujjWvAnajs0XUU67D4m9z7vwDGeaUBWtDnW23CihU8XfsR8rd21msoO5V/TlGnLYU9+qEdy8Rd4CcHs7nIRarF7KgQZaYlrlzND4vTK7HE5OY0+RQk7SuU+0KhCudWPVciWCmeD7U5WGh7UoEiKLlZVVXg8aaAA1NqGQaPjiFHOIGZh6m+5IY6G0tAMFGWCGCZSGdoE+F/A2lU6jXQNm3aMjxs+sEkZOgW+Cw1+Iy5glD08tXJSY6DdNINFZ6TVrBVc5yvcBhjqlidb9Tm9jCzluM00dob3mLN/rhENZZD19ril+6+McrbJZm/JflRQBKjV8=
