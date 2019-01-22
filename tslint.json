@@ -1,12 +1,9 @@
 {
-  "extends": [
-    "tslint:latest",
-    "tslint-config-prettier",
-    "tslint-config-airbnb"
-  ],
+  "extends": ["tslint-config-prettier", "tslint:recommended"],
   "rules": {
     "no-console": false,
     "semicolon": false,
-    "ordered-imports": false
+    "ordered-imports": false,
+    "quotemark": [true, "single"]
   }
 }
