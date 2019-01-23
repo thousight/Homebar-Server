@@ -161,6 +161,23 @@
     read-pkg "^4.0.0"
     registry-auth-token "^3.3.1"
 
+"@semantic-release/npm@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-5.1.4.tgz#970b62765e6c5d51f94e1c14d3bc1f5a224e2ed0"
+  integrity sha512-YRl8VTVwnRTl/sVRvTXs1ncYcuvuGrqPEXYy+lUK1YRLq25hkrhIdv3Ju0u1zGLqVCA8qRlF3NzWl7pULJXVog==
+  dependencies:
+    "@semantic-release/error" "^2.2.0"
+    aggregate-error "^2.0.0"
+    execa "^1.0.0"
+    fs-extra "^7.0.0"
+    lodash "^4.17.4"
+    nerf-dart "^1.0.0"
+    normalize-url "^4.0.0"
+    npm "6.5.0"
+    rc "^1.2.8"
+    read-pkg "^4.0.0"
+    registry-auth-token "^3.3.1"
+
 "@semantic-release/release-notes-generator@^7.1.2", "@semantic-release/release-notes-generator@^7.1.4":
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/@semantic-release/release-notes-generator/-/release-notes-generator-7.1.4.tgz#8f4f752c5a8385abdaac1256127cef05988bc2ad"
@@ -5041,7 +5058,7 @@ npm-which@^3.0.1:
     npm-path "^2.0.2"
     which "^1.2.10"
 
-npm@^6.3.0:
+npm@6.5.0, npm@^6.3.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/npm/-/npm-6.5.0.tgz#30ed48d4cd4d17d68ee04a5fcf9fa2ca9167d819"
   integrity sha512-SPq8zG2Kto+Xrq55E97O14Jla13PmQT5kSnvwBj88BmJZ5Nvw++OmlWfhjkB67pcgP5UEXljEtnGFKZtOgt6MQ==
