@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "eg2.tslint",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "eamodio.gitlens",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense"
+  ]
+}
