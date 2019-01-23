@@ -7,17 +7,17 @@
     "start": "node ./build/server.js",
     "start:dev": "nodemon",
     "build": "rm -rf ./build && tsc",
-    "preinstall": "node scripts/preinstall-script.js",
-    "postinstall": "node scripts/postinstall-script.js",
+    "clean": "rm -rf ./build && rm -rf ./node_modules && rm -rf ./coverage && yarn cache clean && yarn",
+    "clean:dev": "yarn clean && yarn start:dev",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci",
     "test:coverage": "jest --coverage && open coverage/lcov-report/index.html",
-    "clean": "rm -rf ./build && rm -rf ./node_modules && rm -rf ./coverage && yarn cache clean && yarn",
-    "clean:dev": "yarn clean && yarn start:dev",
     "tslint": "tslint '*.ts'",
     "lint-staged": "lint-staged",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "preinstall": "node scripts/preinstall-script.js",
+    "postinstall": "node scripts/postinstall-script.js"
   },
   "repository": {
     "type": "git",

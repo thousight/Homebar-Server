@@ -29,20 +29,24 @@ yarn start:dev
 
 ### Other Useful Commands
 
-1. To create a production build of the server code:
+- **`yarn build`** creates a production build of the server code in the build folder, which is ignored by git, in the project root.
 
-```
-yarn build
-```
+- **`yarn start`** runs the production build in build folder, will error out if the build folder doesn't exist.
 
-2. And to run the production build:
+- **`yarn clean`** removes yarn caches and output folders, then re-installs node_modules.
 
-```
-yarn start
-```
+- **`yarn clean:dev`** does the job of `yarn clean` but starts development server immediately after.
 
-3. To reinstall node modules and yarn/npm caches:
+- **`yarn test`** runs a jest unit test.
 
-```
-yarn clean
-```
+- **`yarn test:watch`** runs jest in watch mode.
+
+- **`yarn test:ci`** runs jest in CI mode, most likely gets called in the CI scripts.
+
+- **`yarn test:coverage`** runs jest and has it return coverage report, then opens the generated coverage report html on the browser.
+
+- **`yarn tslint`** runs the linter on all typescript code.
+
+- **`yarn lint-staged`** runs the linter on all staged files in git, this command is most likely called by husky before creating a git commit.
+
+- **`yarn semantic-release`** runs the semantic-release package to bump package.json version and create git release tag. This is most likely called by Travis CI, but can be ran locally to do a dry-run without actually publishing a release.
