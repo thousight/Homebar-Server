@@ -84,3 +84,21 @@ Explanations for why they exist in this project. (Ignoring @types/\* since they 
 - **[tslint](https://palantir.github.io/tslint/):** TypeScript linter.
 - **[tslint-config-prettier](https://github.com/prettier/tslint-config-prettier):** TSLint plugin that works with Prettier to remove conflicts.
 - **[typescript](https://www.typescriptlang.org/):** A JavaScript that enforces typing.
+
+### Other Recommended Libraries
+
+These libraries are not in this repo but they are some go-tos for certain functionalities.
+
+- **[apollo server](https://www.apollographql.com/docs/apollo-server/):** popular GraphQL server framework.
+- **[artillery](https://artillery.io/):** load testing framework that allows developers to customize load test scenarios.
+- **[async](https://github.com/caolan/async):** JavaScript promise utils library.
+- **[axios](https://github.com/axios/axios):** http client for both browser and node.js.
+- **[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken):** library that creates/verifies jwts.
+- **[knex](https://knexjs.org/):** SQL query builder.
+- **[lodash](https://lodash.com/):** popular object/array/etc. utility library.
+- **[mongoose](https://mongoosejs.com/):** mongoDB node.js library.
+- **[nodemailer](https://nodemailer.com/about/):** email cilent for node.js.
+- **[node-postgres](https://node-postgres.com/):** PostGres client for node.js.
+- **[node_redis](https://github.com/NodeRedis/node_redis):** node.js client for Redis, which helps cache content to boost response time.
+- **[passport](http://www.passportjs.org/):** authentication middleware that supports 300+ kinds of log in methods, including traditional username/password, Facebook, Google, OAuth, SAML, etc.
+- **[rabbitMQ](https://www.rabbitmq.com/):** message broker which queues heavy duties, such as sending email and generating PDFs.
