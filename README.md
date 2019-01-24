@@ -27,11 +27,13 @@ yarn install
 yarn start:dev
 ```
 
-### Other Useful Commands
+### Useful Commands
 
 - **`yarn build`** creates a production build of the server code in the build folder, which is ignored by git, in the project root.
 
 - **`yarn start`** runs the production build in build folder, will error out if the build folder doesn't exist.
+
+- **`yarn start:dev`** runs the development server and will live reload the server on ts file saves.
 
 - **`yarn clean`** removes yarn caches and output folders, then re-installs node_modules.
 
@@ -78,7 +80,7 @@ Explanations for why they exist in this project. (Ignoring @types/\* since they 
 - **[lint-staged](https://github.com/okonet/lint-staged):** run linter to format staged files in git, used with husky to lint staged files before a commit.
 - **[nodemon](https://nodemon.io/):** listens to file saves and live reloads server during development.
 - **[prettier](https://prettier.io/):** code formatter that makes code more readable.
-- **[semantic-release](https://github.com/semantic-release/semantic-release):** automatic release version management.
+- **[semantic-release](https://github.com/semantic-release/semantic-release):** automatic release version management, the documentation for the workflow of the setup for this starter is available [here](https://github.com/thousight/express-ts-starter/docs/semantic-release-workflow.md).
 - **[ts-jest](https://github.com/kulshekhar/ts-jest):** TypeScript preprocessor for Jest.
 - **[ts-node](https://github.com/TypeStrong/ts-node):** node.js that works with TypeScript so that no need to do `tsc` on every file save during development.
 - **[tslint](https://palantir.github.io/tslint/):** TypeScript linter.
