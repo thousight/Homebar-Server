@@ -1,15 +1,9 @@
 {
-  "branch": "master",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
       {
-        "releaseRules": [
-          { "type": "fix", "release": "patch" },
-          { "type": "refactor", "release": "patch" },
-          { "type": "feat", "release": "minor" },
-          { "type": "perf", "release": "major" }
-        ],
+        "preset": "angular",
         "parserOpts": {
           "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
         }

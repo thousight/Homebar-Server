@@ -30,15 +30,17 @@ For more details on commit message format, the semantic release official repo ha
 
 The entire workflow for Semantic Release is defined in `.releaserc`, and it is fully customizable. All the configs are available [here](https://semantic-release.gitbook.io/semantic-release/usage/configuration). And therefore the rest of this section will be going over `.releaserc` for this starter project.
 
-- branch: 'master'
-  - Semantic Release will only run in master branch, and if you want to run it in a different branch, this is where to change it.
 - plugins: [...]
   - Defining the list of plugins to use, and these plugins will run in series, so the order matters.
   - Explanations for the setups within each plugins:
     - [commit-analyzer](https://github.com/semantic-release/commit-analyzer): analyzes commit to come up with the latest version.
-      - `releaseRules` defines the types and its corresponding release type, more customization options can be found [here](https://github.com/semantic-release/commit-analyzer#releaserules).
-      - `parserOpts` defines additional [ conventional-commits-parser](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser#conventionalcommitsparseroptions) options. In this case it defined noteKeywords to be `["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]`, meaning in the commit message containing any of these works will be a breaking change.
+      - `preset`: it is currently using the [angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) conventional changelog preset, and you may find the guideline [here](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). If you would like to customize the rules for release, you may find out how to do `releaseRules` [here](https://github.com/semantic-release/commit-analyzer#releaserules).
+      - `parserOpts`: defines additional [ conventional-commits-parser](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser#conventionalcommitsparseroptions) options. In this case it defined noteKeywords to be `["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]`, meaning in the commit message containing any of these works will be a breaking change.
     - [release-notes-generator](https://github.com/semantic-release/release-notes-generator): generates changelog content.
       - `preset`: it is currently using the [angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) conventional changelog preset
-    - [npm](https://github.com/semantic-release/npm):
-    - [git](https://github.com/semantic-release/git):
+      - `parserOpts`: same as the parserOpts in commit-analyzer above -`writerOpts`: defines additional [ conventional-commits-parser](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser#conventionalcommitsparseroptions) options. In this case it defined commitsSort to be ["subject", "scope"], which means it will sort the release notes output by subject first, then by scope.
+    - [npm](https://github.com/semantic-release/npm): increments package.json version number and publish to npm.
+      - `npmPublish`: defines if this repo should be published to npm or not, in this case it is `false` since we don't want to publish it.
+    - [git](https://github.com/semantic-release/git): push a commit to master with all the generated files during release process.
+      - `assets`: defines what generated files can be committed by this plugin, in this case we only commit package.json for the incremented version.
+      - `message`: defines the commit title format for commit pushed by this plugin.
