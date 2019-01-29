@@ -1,6 +1,7 @@
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
   # Don't run CI on tag push
   except:
     - /^v\d+\.\d+\.\d+$/
