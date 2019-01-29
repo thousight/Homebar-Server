@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "esModuleInterop": true,
     "lib": ["esnext", "es2015"],
     "module": "commonjs",
     "moduleResolution": "node",

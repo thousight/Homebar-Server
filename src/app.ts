@@ -1,11 +1,11 @@
-import * as express from 'express'
-import * as bodyParser from 'body-parser'
-import * as compression from 'compression'
-import * as morgan from 'morgan'
-import * as cors from 'cors'
+import express from 'express'
+import bodyParser from 'body-parser'
+import compression from 'compression'
+import morgan from 'morgan'
+import cors from 'cors'
 
 import { LoggerStream } from './utils/logger'
-import * as packageJson from '../package.json'
+import packageJson from '../package.json'
 
 const app = express()
 
