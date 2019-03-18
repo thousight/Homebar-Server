@@ -17,12 +17,12 @@ jobs:
     - stage: test
       script:
         - yarn test:ci
-    - stage: pre-release
+    - stage: release
       if: branch = master AND (NOT type = pull_request)
       script:
         - yarn semantic-release
     - stage: deploy
-      if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(travis-deploy)/)
+      if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(travis-deploy)/)
       before_deploy:
       deploy:
         provider: heroku
