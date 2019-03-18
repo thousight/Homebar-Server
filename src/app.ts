@@ -31,7 +31,9 @@ app.use(
 app.use(bodyParser.json())
 
 app.use('/', (_, res) =>
-  res.status(200).send(`${packageJson.name} is running!`),
+  res
+    .status(200)
+    .send(`${packageJson.name} is running at version ${packageJson.version}!`),
 )
 
 export default app

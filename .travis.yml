@@ -7,7 +7,7 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 language: node_js
 node_js:
-  - "11.10.1"
+  - '11.10.1'
 cache:
   directories:
     - '~/.npm'
@@ -17,10 +17,13 @@ jobs:
     - stage: test
       script:
         - yarn test:ci
-    - stage: deploy
+    - stage: pre-release
       if: branch = master AND (NOT type = pull_request)
-      before_deploy:
+      script:
         - yarn semantic-release
+    - stage: deploy
+      if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(travis-deploy)/)
+      before_deploy:
       deploy:
         provider: heroku
         app: express-ts-starter
