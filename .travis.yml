@@ -15,15 +15,15 @@ cache:
 jobs:
   include:
     - stage: test
+      if: commit_message !~ /(travis-deploy)/
       script:
         - yarn test:ci
     - stage: release
-      if: branch = master AND (NOT type = pull_request)
+      if: branch = master AND (NOT type = pull_request) AND (commit_message !~ /(travis-deploy)/)
       script:
         - yarn semantic-release
     - stage: deploy
       if: branch = master AND (NOT type = pull_request) AND (commit_message =~ /(travis-deploy)/)
-      before_deploy:
       deploy:
         provider: heroku
         app: express-ts-starter
