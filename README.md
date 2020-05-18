@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/thousight/Express-TS-Starter.svg?branch=master)](https://travis-ci.org/thousight/Express-TS-Starter) [![Greenkeeper badge](https://badges.greenkeeper.io/thousight/Express-TS-Starter.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.com/thousight/Express-TS-Starter.svg?branch=master)](https://travis-ci.com/thousight/Express-TS-Starter) [![Greenkeeper badge](https://badges.greenkeeper.io/thousight/Express-TS-Starter.svg)](https://greenkeeper.io/)
 
 # Express-TS-Starter
 
