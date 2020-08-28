@@ -4,14 +4,17 @@ import compression from 'compression'
 import morgan from 'morgan'
 import cors from 'cors'
 
+import apollo from './graphql'
 import { LoggerStream } from './utils/logger'
 import packageJson from '../package.json'
 
 const app = express()
 
+apollo.applyMiddleware({ app })
+
 app.use(
   cors({
-    methods: 'POST,GET,OPTIONS',
+    methods: 'POST,GET',
   }),
 )
 
