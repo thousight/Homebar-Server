@@ -1,6 +1,6 @@
 {
   "name": "homebar-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Homebar app server with express, Apollo GraphQL, and TypeScript",
   "main": "server.js",
   "scripts": {
